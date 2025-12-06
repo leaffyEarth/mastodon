@@ -111,7 +111,7 @@ jobs:
   # Then merge the docker images into a single one
   merge-images:
     if: ${{ inputs.push_to_images != '' }}
-    runs-on: ubuntu-24.04
+    runs-on: monkci-runners-4vcpu
     needs:
       - build-image
 
