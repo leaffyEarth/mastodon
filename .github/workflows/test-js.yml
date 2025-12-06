@@ -30,7 +30,7 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: monkci-runners-4vcpu
 
     steps:
       - name: Clone repository
