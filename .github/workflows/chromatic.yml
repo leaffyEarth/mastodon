@@ -11,7 +11,7 @@ on:
 jobs:
   pathcheck:
     name: Check for relevant changes
-    runs-on: ubuntu-latest
+    runs-on: monkci-runners-4vcpu
     outputs:
       changed: ${{ steps.filter.outputs.src }}
     steps:
