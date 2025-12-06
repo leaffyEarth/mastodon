@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   compute-suffix:
-    runs-on: ubuntu-latest
+    runs-on: monkci-runners-4vcpu
     if: github.repository == 'mastodon/mastodon'
     steps:
       - id: version_vars
