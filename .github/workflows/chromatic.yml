@@ -11,7 +11,7 @@ on:
 jobs:
   pathcheck:
     name: Check for relevant changes
-    runs-on: monkci-runners-4vcpu
+    runs-on: monkci-runners-8vcpu
     outputs:
       changed: ${{ steps.filter.outputs.src }}
     steps:
@@ -37,9 +37,8 @@ jobs:
 
   chromatic:
     name: Run Chromatic
-    runs-on: ubuntu-latest
+    runs-on: monkci-runners-8vcpu
     needs: pathcheck
-    if: github.repository == 'mastodon/mastodon' && needs.pathcheck.outputs.changed == 'true'
     steps:
       - name: Checkout code
         uses: actions/checkout@v5
